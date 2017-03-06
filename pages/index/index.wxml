@@ -1,0 +1,41 @@
+<view style="margin: 0 auto 0rpx auto; border:1px solid #d3d3d3;width:{{canvasWidth}}px;height:{{canvasHeight}}px;overflow:hidden;position:relative;">
+<canvas canvas-id="myCanvas" disable-scroll="true"
+  style="margin: 0 auto;width:{{canvasWidth}}px;height:{{canvasHeight}}px;overflow:hidden;position:relative;"
+  bindtouchstart="start"
+  bindtouchmove="move"
+  bindtouchend="end"/>
+  <image src="../../images/bg.png" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;position:absolute;left:0;top:0;" class="bg"  hidden="{{hidden}}"/>
+</view>
+
+
+<view class="zb" hidden="{{hidden}}">
+    <text>
+        {{imgX}}, {{imgY}}
+    </text>
+    <text >
+        {{scale}},
+    </text>
+    <text>
+        {{rotate}}
+    </text>
+</view>
+
+<view class="section section_gap"  hidden="{{hidden}}">
+  <view class="body-view">
+    <slider bindchange="slider4change" min="0" max="10" step="1" show-value/>
+  </view>
+</view>
+
+<button class="addImg" bindtap="scaleFn"  hidden="{{hidden}}">
+	缩放图片
+</button>
+
+<button class="addImg" bindtap="addImg">
+	添加图片
+</button>
+
+<button class="addImg" bindtap="createImg">
+	生成图片
+</button>
+
+<image src="{{resultSrc}}" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;" bindtap="previewImg"/>

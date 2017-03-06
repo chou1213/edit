@@ -1,0 +1,19 @@
+#gestureView{
+	width:500rpx;
+	height:500rpx;
+	background-color: black;
+}
+.zb{
+	width:500rpx;
+	height:250rpx;
+}
+.addImg{
+	width:300rpx;
+	font-size:30rpx;
+    display:inline-block;
+    margin:20rpx 10rpx;
+}
+page{
+    text-align:center;
+}
+
